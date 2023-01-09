@@ -3,6 +3,9 @@ import Card from "../components/Card";
 import Header from "../components/Header";
 import data from "../data";
 import Menu from "../components/Menu";
+import Footer from "../components/Footer";
+import LargeCard from "../components/LargeCard";
+import largeImage from '../assets/discover.jpeg'
 
 export default function Home({ exploreData }) {
   return (
@@ -18,7 +21,7 @@ export default function Home({ exploreData }) {
         <main className="max-w-9xl mx-auto px-8 sm:px-16">
           <section className="pt-6">
             <Menu />
-            <div className="flex space-x-3 p-4 -ml-3">
+            <div className="flex space-x-3 overflow-scroll scrollbar-hide p-4 -ml-3">
               {data?.map(({ id, slides, location, owner, price }) => (
                 <Card
                   key={id}
@@ -31,7 +34,15 @@ export default function Home({ exploreData }) {
               ))}
             </div>
           </section>
+          <LargeCard 
+          img={largeImage}
+          title="The greatest outdoors"
+          description="wishlist created by airbnb"
+          buttonText="Get inspired"
+        />
         </main>
+        {/* Footer */}
+        <Footer />
       </div>
     </>
   );

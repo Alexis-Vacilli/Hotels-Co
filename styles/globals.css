@@ -9,8 +9,12 @@
     box-sizing: border-box;
 }
 
-body{
-    /* font-family: 'Nunito', sans-serif; */
+
+
+@layer components {
+    .button {
+        @apply px-4 py-2 border rounded-full cursor-pointer hover:shadow-md active:scale-95 active:bg-gray-100 transform transition duration-300 ease-out
+    }
 }
 
 
